@@ -1,0 +1,665 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-date-range/dist/styles.css'; // main style file
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import 'react-date-range/dist/theme/default.css'; // theme css file
+
+@import './styles/constants';
+@import './styles/utility';
+@import './components/global-navbar/global-navbar.scss';
+@import './components/ux/input/input.scss';
+@import './components/ux/data-range-picker/date-range-picker.scss';
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin keyframeMaker($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+}
+
+.spaces {
+  $spaces: (
+    0: 0px,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+    11: 11px,
+    12: 12px,
+    13: 13px,
+    14: 14px,
+    15: 15px,
+    16: 16px,
+    17: 17px,
+    18: 18px,
+    20: 20px,
+    22: 22px,
+    23: 23px,
+    24: 24px,
+    25: 25px,
+    26: 26px,
+    28: 28px,
+    29: 29px,
+    30: 30px,
+    31: 31px,
+    32: 32px,
+    34: 34px,
+    35: 35px,
+    36: 36px,
+    40: 40px,
+    44: 44px,
+    48: 48px,
+    53: 53px,
+    60: 60px,
+    58: 58px,
+    62: 62px,
+    63: 63px,
+    65: 65px,
+    70: 70px,
+    75: 75px,
+    78: 78px,
+    80: 80px,
+    90: 90px,
+    92: 92px,
+    95: 95px,
+    100: 100px,
+    105: 105px,
+    110: 110px,
+    120: 120px,
+    125: 125px,
+    130: 130px,
+    140: 140px,
+    150: 150px,
+    155: 155px,
+    180: 180px,
+    200: 200px,
+    220: 220px,
+    225: 225px,
+    228: 228px,
+    242: 242px,
+    245: 245px,
+    250: 250px,
+    255: 255px,
+    256: 256px,
+    263: 263px,
+    265: 265px,
+    275: 275px,
+    300: 300px,
+    280: 280px,
+    310: 310px,
+    320: 320px,
+    350: 350px,
+    400: 400px,
+    425: 425px,
+    455: 455px,
+    465: 465px,
+    470: 470px,
+    480: 480px,
+    510: 510px,
+    599: 599px,
+    600: 600px,
+    620: 620px,
+    774: 774px,
+    783: 783px,
+    900: 900px,
+    912: 912px,
+    1280: 1280px,
+  );
+
+  @each $name,
+  $value in $spaces {
+    &.m-#{$name} {
+      margin: $value !important;
+    }
+
+    &.mt-#{$name} {
+      margin-top: $value !important;
+    }
+
+    &.mr-#{$name} {
+      margin-right: $value !important;
+    }
+
+    &.mb-#{$name} {
+      margin-bottom: $value !important;
+    }
+
+    &.ml-#{$name} {
+      margin-left: $value !important;
+    }
+
+    &.mx-#{$name} {
+      margin-left: $value !important;
+      margin-right: $value !important;
+    }
+
+    &.my-#{$name} {
+      margin-top: $value !important;
+      margin-bottom: $value !important;
+    }
+
+    &.p-#{$name} {
+      padding: $value !important;
+    }
+
+    &.pt-#{$name} {
+      padding-top: $value !important;
+    }
+
+    &.pr-#{$name} {
+      padding-right: $value !important;
+    }
+
+    &.pb-#{$name} {
+      padding-bottom: $value !important;
+    }
+
+    &.pl-#{$name} {
+      padding-left: $value !important;
+    }
+
+    &.px-#{$name} {
+      padding-left: $value !important;
+      padding-right: $value !important;
+    }
+
+    &.py-#{$name} {
+      padding-top: $value !important;
+      padding-bottom: $value !important;
+    }
+
+    &.h-#{$name} {
+      height: $value !important;
+    }
+
+    &.min-h-#{$name} {
+      min-height: $value !important;
+    }
+
+    &.max-h-#{$name} {
+      max-height: $value !important;
+    }
+
+    &.w-#{$name} {
+      width: $value !important;
+    }
+
+    &.min-w-#{$name} {
+      min-width: $value !important;
+    }
+
+    &.max-w-#{$name} {
+      max-width: $value !important;
+    }
+
+    &.fs-#{$name} {
+      font-size: $value !important;
+    }
+
+    &.rounded-#{$name} {
+      border-radius: $value !important;
+    }
+
+    &.gap-#{$name} {
+      gap: $value !important;
+    }
+
+    &.bottom-#{$name} {
+      bottom: $value !important;
+    }
+
+    &.line-height-#{$name} {
+      line-height: $value !important;
+    }
+
+    &.left-#{$name} {
+      left: $value !important;
+    }
+
+    &.top-#{$name} {
+      top: $value !important;
+    }
+    
+    &.min-h-#{$name} {
+      min-height: $value !important;
+    }
+    
+    &.fs-#{$name} {
+        font-size: $value !important;
+    }
+
+    &.h-calc-vh-#{$name} {
+      height: calc(100vh - $value) !important;
+    }
+
+    &.h-calc-#{$name} {
+      height: calc(100% - $value) !important;
+    }
+
+    &.flex-#{$name} {
+      flex: $name !important;
+    }
+
+    &.radius-#{$name} {
+      border-radius: $value !important;
+    }
+  }
+
+  $spaces_percent: (
+    1: 1%,
+    2: 2%,
+    3: 3%,
+    4: 4%,
+    5: 5%,
+    6: 6%,
+    7: 7%,
+    8: 8%,
+    9: 9%,
+    10: 10%,
+    11: 11%,
+    12: 12%,
+    13: 13%,
+    14: 14%,
+    15: 15%,
+    16: 16%,
+    17: 17%,
+    18: 18%,
+    19: 19%,
+    20: 20%,
+    21: 21%,
+    22: 22%,
+    23: 23%,
+    24: 24%,
+    25: 25%,
+    26: 26%,
+    27: 27%,
+    28: 28%,
+    29: 29%,
+    30: 30%,
+    31: 31%,
+    32: 32%,
+    33: 33%,
+    34: 34%,
+    35: 35%,
+    36: 36%,
+    37: 37%,
+    38: 38%,
+    39: 39%,
+    40: 40%,
+    41: 41%,
+    42: 42%,
+    43: 43%,
+    44: 44%,
+    45: 45%,
+    46: 46%,
+    47: 47%,
+    48: 48%,
+    49: 49%,
+    50: 50%,
+    51: 51%,
+    52: 52%,
+    53: 53%,
+    54: 54%,
+    55: 55%,
+    56: 56%,
+    57: 57%,
+    58: 58%,
+    59: 59%,
+    60: 60%,
+    61: 61%,
+    62: 62%,
+    63: 63%,
+    64: 64%,
+    65: 65%,
+    66: 66%,
+    67: 67%,
+    68: 68%,
+    69: 69%,
+    70: 70%,
+    71: 71%,
+    72: 72%,
+    73: 73%,
+    74: 74%,
+    75: 75%,
+    76: 76%,
+    77: 77%,
+    78: 78%,
+    79: 79%,
+    80: 80%,
+    81: 81%,
+    82: 82%,
+    83: 83%,
+    84: 84%,
+    85: 85%,
+    86: 86%,
+    87: 87%,
+    88: 88%,
+    89: 89%,
+    90: 90%,
+    91: 91%,
+    92: 92%,
+    93: 93%,
+    94: 94%,
+    95: 95%,
+    96: 96%,
+    97: 97%,
+    98: 98%,
+    99: 99%,
+    100: 100%,
+  );
+
+  @each $name, $value in $spaces_percent {
+    &.margin-#{$name} {
+      margin: $value !important;
+    }
+
+    &.margin-t-#{$name} {
+      margin-top: $value !important;
+    }
+
+    &.margin-r-#{$name} {
+      margin-right: $value !important;
+    }
+
+    &.margin-b-#{$name} {
+      margin-bottom: $value !important;
+    }
+
+    &.margin-l-#{$name} {
+      margin-left: $value !important;
+    }
+
+    &.margin-x-#{$name} {
+      margin-left: $value !important;
+      margin-right: $value !important;
+    }
+
+    &.margin-y-#{$name} {
+      margin-top: $value !important;
+      margin-bottom: $value !important;
+    }
+
+    &.padding-#{$name} {
+      padding: $value !important;
+    }
+
+    &.padding-t-#{$name} {
+      padding-top: $value !important;
+    }
+
+    &.padding-r-#{$name} {
+      padding-right: $value !important;
+    }
+
+    &.padding-b-#{$name} {
+      padding-bottom: $value !important;
+    }
+
+    &.padding-l-#{$name} {
+      padding-left: $value !important;
+    }
+
+    &.padding-x-#{$name} {
+      padding-left: $value !important;
+      padding-right: $value !important;
+    }
+
+    &.padding-y-#{$name} {
+      padding-top: $value !important;
+      padding-bottom: $value !important;
+    }
+
+    &.height-#{$name} {
+      height: $value !important;
+    }
+
+    &.width-#{$name} {
+      width: $value !important;
+    }
+
+    &.custom-size-dialog {
+      &-#{$name}>.modal-dialog {
+        width: $value !important;
+        padding: 50px 0 !important;
+      }
+    }
+  }
+
+  $spaces_number: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+  );
+
+  @each $name, $value in $spaces_number {
+    &.z-index-#{$name} {
+      z-index: $value !important;
+    }
+  }
+
+  &.pb-30 {
+    @include media(767px) {
+      padding-bottom: 16px !important;
+    }
+  }
+
+  &.px-80 {
+    padding-right: 80px;
+    padding-left: 80px;
+
+    @media screen and (max-width: 460px) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
+  &.py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    // @media screen and (max-width: 460px) {
+    //   padding-top: 16px;
+    //   padding-bottom: 16px;
+    // }
+  }
+
+  &.p-sm-30 {
+    padding: 30px;
+
+    @include media(767px) {
+      padding: 16px;
+    }
+  }
+
+  &.px-sm-30 {
+    padding: 0px 30px;
+
+    @include media(767px) {
+      padding: 0px 16px;
+    }
+  }
+
+  &.pr-sm-30 {
+    padding-right: 30px !important;
+
+    @include media(767px) {
+      padding-right: 16px !important;
+    }
+  }
+
+  &.p-sm-24 {
+    padding: 24px !important;
+
+    @include media(767px) {
+      padding: 16px !important;
+    }
+  }
+
+  &.px-sm-24 {
+    padding: 0px 24px !important;
+
+    @include media(767px) {
+      padding: 0px 16px !important;
+    }
+  }
+
+  &.pt-sm-24 {
+    padding-top: 24px !important;
+
+    @include media(767px) {
+      padding-top: 16px !important;
+    }
+  }
+
+  &.pl-sm-24 {
+    padding-left: 24px !important;
+
+    @include media(767px) {
+      padding: 12px !important;
+    }
+  }
+
+  &.h-auto{
+    height: auto !important;
+  }
+
+  &.m-auto {
+    margin: auto !important;
+  }
+
+  &.mr-auto {
+    margin-right: auto !important;
+  }
+
+  &.mt-auto {
+    margin-top: auto !important;
+  }
+
+  &.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  &.my-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  &.mx-pt-12 {
+    margin-top: 12%;
+    margin-bottom: 12%;
+  }
+
+
+  &.mb-14 {
+    margin-bottom: 14px !important;
+  }
+
+  &.mb-1 {
+    margin-bottom: 1px;
+  }
+
+  &.mb-2 {
+    margin-bottom: 2px;
+  }
+
+  &.ml--12 {
+    margin-left: -12px;
+  }
+
+  &.ml--15 {
+    margin-left: -15px;
+  }
+  
+  &.mr--15 {
+    margin-right: -15px;
+  }
+
+  &.m-sm-30 {
+    margin: 30px;
+
+    @include media(767px) {
+      margin: 16px;
+    }
+  }
+
+  &.mb-sm-30 {
+    margin-bottom: 30px;
+
+    @include media(767px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &.mt-sm-30 {
+    margin-top: 30px;
+
+    @include media(767px) {
+      margin-top: 16px;
+    }
+  }
+
+  &.mx-sm-30 {
+    margin-right: 30px;
+    margin-left: 30px;
+
+    @include media(767px) {
+      margin-right: 16px;
+      margin-left: 16px;
+    }
+  }
+
+  &.h-100vh {
+    height: 100vh;
+  }
+
+  &.h-100vh-80 {
+    height: calc(100vh - 80px);
+  }
+
+  &.max-h-60vh {
+    max-height: 60vh;
+  }
+
+  &.size-36 {
+    height: 36px !important;
+    width: 36px !important;
+  }
+
+  &.size-24 {
+    height: 24px !important;
+    width: 24px !important;
+  }
+
+  &.align-bottom {
+    vertical-align: bottom !important;
+  }
+}

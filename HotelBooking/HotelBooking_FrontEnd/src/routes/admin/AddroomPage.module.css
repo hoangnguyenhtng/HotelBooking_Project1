@@ -1,0 +1,533 @@
+ADMIN HOME STYLE
+.admin-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.welcome-message {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #007F86;
+}
+
+.admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.admin-button {
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    background-color: #007F86;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-button:hover {
+    background-color: rgb(34, 80, 128);
+} 
+.edit-room-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-room-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007F86;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.edit-room-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-room-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-room-form .form-group input,
+.edit-room-form .form-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: .5px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+}
+
+.edit-room-form .form-group textarea {
+    height: 100px;
+}
+
+.edit-room-form .form-group .room-photo,
+.edit-room-form .form-group .room-photo-preview {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.update-button,
+.delete-button {
+    display: inline-block;
+    width: calc(50% - 10px);
+    padding: 10px 20px;
+    margin: 10px 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.update-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.update-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+.bookings-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007F86;
+}
+
+.search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 20px auto;
+}
+
+.search-div label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.search-div input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 250px;
+}
+
+.booking-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-result-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.booking-result-item:hover {
+    transform: translateY(-5px);
+}
+
+.booking-result-item p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.booking-result-item p strong {
+    color: #333;
+}
+
+.edit-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007F86;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.edit-link:hover {
+    background-color: rgb(34, 80, 128);
+}
+
+
+
+.acheive-booking {
+    margin: 10px auto;
+    background-color: rgb(164, 16, 16);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.acheive-booking:hover {
+    background-color: rgb(79, 14, 14);
+}
+
+.book-now-button {
+    background-color: #007F86;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-room-button {
+    background-color: #007F86;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.book-now-button:hover,
+.edit-room-button:hover {
+    opacity: 0.8;
+}
+
+.find-booking-page {
+    max-width: 50%;
+    margin: 10px auto 60px auto;
+    padding: 20px;
+}
+
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007F86;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(34, 80, 128);
+}
+
+.booking-details {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.pagination-ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.pagination-li {
+    margin: 0 5px;
+}
+
+.pagination-button {
+    background-color: #fff;
+    color: #007F86;
+    border: 1px solid #007F86;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-button:hover {
+    background-color: rgb(34, 80, 128);
+    color: #fff;
+}
+
+.current-page {
+    background-color: #007F86;
+    color: #fff;
+}
+
+.booking-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-result-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.booking-result-item:hover {
+    transform: translateY(-5px);
+}
+
+.booking-result-item p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.booking-result-item p strong {
+    color: #333;
+}
+
+.edit-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007F86;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.edit-link:hover {
+    background-color: rgb(34, 80, 128);
+}
+
+
+.acheive-booking {
+    margin: 10px auto;
+    background-color: rgb(164, 16, 16);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.acheive-booking:hover {
+    background-color: rgb(79, 14, 14);
+}
+
+
+.all-rooms {
+    margin: 50px 0px 90px 0px;
+}
+
+.all-rooms h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007F86;
+}
+
+.all-room-filter-div {
+    margin-left: 5rem;
+}
+
+.all-room-filter-div label {
+    color: #007F86;
+}
+
+.filter-select-div {
+    width: 100%;
+    margin: 0px 0px 0px 4rem;
+}
+
+.add-room-button {
+    float: right;
+    margin-right: 70px;
+    font-weight: 600;
+}
+
+.all-room-filter-div label {
+    font-weight: 800;
+    font-size: 20px;
+
+}
+
+.all-room-filter-div select {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+.all-rooms {
+    margin: 50px 0px 90px 0px;
+}
+
+.all-rooms h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #005586;
+}
+
+.all-room-filter-div {
+    margin-left: 5rem;
+}
+
+.all-room-filter-div label {
+    color: #007F86;
+}
+
+.filter-select-div {
+    width: 100%;
+    margin: 0px 0px 0px 4rem;
+}
+
+.add-room-button {
+    float: right;
+    margin-right: 70px;
+    font-weight: 600;
+}
+
+.all-room-filter-div label {
+    font-weight: 800;
+    font-size: 20px;
+
+}
+
+.all-room-filter-div select {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.room-results {
+    display: block;
+    flex-wrap: wrap;
+    margin: 10px 30px;
+}
+
+.room-list-item {
+    width: calc(95% - 20px);
+    height: 20vh;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+.room-list-item-image {
+    width: 20%;
+    height: 20vh;
+}
+
+.room-details {
+    flex: 1;
+    padding: 15px;
+    margin-left: 10px;
+}
+
+.room-details h3 {
+    color: #007F86;
+}
+
+.room-detail-loading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #666;
+
+}
+
+.book-now-div {
+    align-self: center;
+}
+
+.book-now-button {
+    background-color: #007F86;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.book-now-button:hover {
+    background-color: rgb(34, 80, 128)
+} 
+

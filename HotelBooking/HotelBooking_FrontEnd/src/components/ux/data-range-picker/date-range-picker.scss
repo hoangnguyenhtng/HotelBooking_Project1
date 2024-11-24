@@ -1,0 +1,20 @@
+
+.stay-booker__input--dark {
+    border: 1px solid rgb(204, 204, 204) !important;
+}
+
+.stay-booker__input {
+    color: #868585;
+
+    .css-13cymwt-control {
+        border-radius: 0px !important;
+    }
+}
+
+.sb__date-range-picker {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 100%;
+    width: 100%;
+}
